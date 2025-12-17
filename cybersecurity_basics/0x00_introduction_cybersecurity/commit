@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+
+git add .
+
+git commit -m "Dont dear to open"
+
+git push origin main
