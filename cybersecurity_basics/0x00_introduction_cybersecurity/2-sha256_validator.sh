@@ -1,2 +1,2 @@
 #!/bin/bash
-if [[ $(sha256sum $1) == $2 ]]; then echo "test_file: OK";fi 
+sha256sum -c "$2 $1"
