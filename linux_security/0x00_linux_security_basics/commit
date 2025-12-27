@@ -2,6 +2,6 @@
 
 git add .
 
-git commit -m "Dont dear to open"
+git commit -m "Introducing Linux Adminstration"
 
 git push origin main
