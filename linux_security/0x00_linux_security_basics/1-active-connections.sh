@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -t -a -p
+sudo ss -tnaep
