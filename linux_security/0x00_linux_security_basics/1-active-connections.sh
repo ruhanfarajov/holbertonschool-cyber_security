@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -talpn
+sudo ss -tlpn -al
