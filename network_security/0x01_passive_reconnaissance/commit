@@ -1,0 +1,7 @@
+#/usr/bin/env bash
+
+git add .
+
+git commit -m "AWK HACKS THE BOX"
+
+git push origin main
