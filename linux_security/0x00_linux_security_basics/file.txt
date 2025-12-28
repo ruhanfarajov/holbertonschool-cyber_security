@@ -1,0 +1,5 @@
+State  Recv-Q Send-Q  Local Address:Port   Peer Address:PortProcess                                
+LISTEN 0      80          127.0.0.1:3306        0.0.0.0:*    users:(("mariadbd",pid=1049,fd=24))   
+LISTEN 0      1024          0.0.0.0:8834        0.0.0.0:*    users:(("nessusd",pid=962,fd=18))     
+ESTAB  0      0      192.168.68.167:60550 34.107.243.93:443  users:(("firefox-esr",pid=4492,fd=60))
+LISTEN 0      1024             [::]:8834           [::]:*    users:(("nessusd",pid=962,fd=19))     

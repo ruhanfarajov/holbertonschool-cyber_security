@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ss -tlpn -al
+sudo ss -a -n -t -p
