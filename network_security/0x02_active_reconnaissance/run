@@ -1,0 +1,5 @@
+git add .
+git commit -m "aaa"
+git config --global user.name "Muradd0507"
+git config --global user.email "muradqulizade75@gmail.com"
+git push
