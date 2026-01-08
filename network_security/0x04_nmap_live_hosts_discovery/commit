@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+git add .
+
+git commit -m "It is doing the right thing"
+
+git push origin main
