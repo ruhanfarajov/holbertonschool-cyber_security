@@ -1,1 +1,1 @@
-_ws.col.protocol == "ICMP"
+icmp.type == 3 && icmp.code == 3
