@@ -1,1 +1,1 @@
-_ws.col.protocol == "IPv4"
+ip.proto == 1
