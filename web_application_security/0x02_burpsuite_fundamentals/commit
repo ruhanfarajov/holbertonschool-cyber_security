@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git add .
+
+git commit -m "I BROUGHT PEACE TO THE MIDDLE EAST"
+
+
+git push origin main
