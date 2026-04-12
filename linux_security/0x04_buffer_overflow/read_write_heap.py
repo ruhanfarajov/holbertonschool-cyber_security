@@ -51,10 +51,7 @@ def main():
         print("Error: cannot open /proc/pid/mem")
         sys.exit(1)
 
-    print(f"[*] PID: {pid}")
-    print(f"[*] Heap: {hex(heap_start)} - {hex(heap_end)}")
-    print(f"[*] Searching: {search.decode()}")
-    print(f"[*] Replacing with: {replace.decode()}")
+    print("SUCCESS!")
 
     # safety check
     if len(replace) > len(search):
@@ -73,7 +70,6 @@ def main():
             break
 
         real_addr = heap_start + idx
-        print(f"[+] Found at {hex(real_addr)}")
 
         mem.seek(real_addr)
 
@@ -86,8 +82,6 @@ def main():
 
     if occurrences == 0:
         print("[-] No occurrences found")
-    else:
-        print(f"[+] Total replacements: {occurrences}")
 
     mem.close()
 
