@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 import sys
+i
+
 
 def usage():
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
+
 
 def find_heap_range(pid):
     maps_path = f"/proc/{pid}/maps"
@@ -21,6 +24,7 @@ def find_heap_range(pid):
 
     print("Error: heap not found")
     sys.exit(1)
+
 
 def main():
     if len(sys.argv) != 4:
@@ -83,6 +87,7 @@ def main():
         print(f"[+] Total replacements: {occurrences}")
 
     mem.close()
+
 
 if __name__ == "__main__":
     main()
