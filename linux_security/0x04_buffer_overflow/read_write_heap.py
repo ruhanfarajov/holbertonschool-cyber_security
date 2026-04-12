@@ -51,8 +51,6 @@ def main():
         print("Error: cannot open /proc/pid/mem")
         sys.exit(1)
 
-    print("SUCCESS!")
-
     # safety check
     if len(replace) > len(search):
         print("Error: replace_string cannot be longer than search_string")
