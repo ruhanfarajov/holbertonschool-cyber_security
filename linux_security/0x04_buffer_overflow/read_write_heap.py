@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+# this document is intended to get the task done
 import sys
-i
 
 
 def usage():
@@ -77,7 +77,7 @@ def main():
 
         mem.seek(real_addr)
 
-        # ✅ correct padding: spaces forced to end
+        # correct padding: spaces forced to end
         data = (replace + b' ' * len(search))[:len(search)]
         mem.write(data)
 
