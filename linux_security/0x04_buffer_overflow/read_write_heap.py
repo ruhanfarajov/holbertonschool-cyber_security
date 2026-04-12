@@ -4,11 +4,13 @@ i
 
 
 def usage():
+    'tells user how to use'
     print("Usage: read_write_heap.py pid search_string replace_string")
     sys.exit(1)
 
 
 def find_heap_range(pid):
+    'find heap range in differences'
     maps_path = f"/proc/{pid}/maps"
 
     try:
@@ -27,6 +29,7 @@ def find_heap_range(pid):
 
 
 def main():
+    'main function that should be called'
     if len(sys.argv) != 4:
         usage()
 
@@ -90,4 +93,5 @@ def main():
 
 
 if __name__ == "__main__":
+    'main executing if no issuse'
     main()
