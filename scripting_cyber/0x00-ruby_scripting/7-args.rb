@@ -1,15 +1,12 @@
 #!/usr/bin/env ruby
 
-# Function that prints command-line arguments
-# ARGV is a special Ruby array containing all command-line arguments
+# Function that prints command-line arguments with 1-based indexing
 def print_arguments
-  # Check if no arguments were provided
   if ARGV.empty?
     puts "No arguments provided."
   else
-    # Loop through each argument and print it
-    ARGV.each do |arg|
-      puts arg
+    ARGV.each_with_index do |arg, index|
+      puts "#{index + 1}. #{arg}"
     end
   end
 end
