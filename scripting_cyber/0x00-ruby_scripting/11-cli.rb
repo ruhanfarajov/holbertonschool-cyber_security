@@ -2,7 +2,6 @@
 
 require 'optparse'
 
-# File to store tasks
 TASKS_FILE = 'tasks.txt'
 
 # Function to add a new task
@@ -15,13 +14,14 @@ end
 
 # Function to list all tasks
 def list_tasks
-  if File.exist?(TASKS_FILE)
+  if File.exist?(TASKS_FILE) && !File.zero?(TASKS_FILE)
     tasks = File.readlines(TASKS_FILE, chomp: true)
     if tasks.empty?
       puts "No tasks found."
     else
-      tasks.each do |task|
-        puts task
+      puts "Tasks:"
+      tasks.each_with_index do |task, index|
+        puts "#{index + 1}. #{task}"
       end
     end
   else
@@ -31,7 +31,7 @@ end
 
 # Function to remove a task by index
 def remove_task(index)
-  unless File.exist?(TASKS_FILE)
+  unless File.exist?(TASKS_FILE) && !File.zero?(TASKS_FILE)
     puts "No tasks found."
     return
   end
@@ -75,14 +75,11 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-# Execute the appropriate action based on options
+# Execute the appropriate action
 if options[:add]
   add_task(options[:add])
 elsif options[:list]
   list_tasks
 elsif options[:remove]
   remove_task(options[:remove])
-else
-  puts "Usage: cli.rb [options]"
-  puts "Use -h or --help for more information."
 end
